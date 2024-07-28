@@ -11,6 +11,16 @@ Add accounts-base:
 $ meteor add accounts-base
 ```
 
+Update to latest packages:
+
+```shell
+$ meteor npm uninstall meteor-vite vite
+$ meteor npm install meteor-vite@2.0.0-next.1 vite@5 --force
+
+$ meteor remove jorgenvatle:vite-bundler
+$ meteor add jorgenvatle:vite-bundler@3.0.0-meteor3.next.10
+```
+
 Run app:
 
 ```shell
