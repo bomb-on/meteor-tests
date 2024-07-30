@@ -1,7 +1,6 @@
 <script setup>
 import { Meteor } from 'meteor/meteor';
 import { ref } from 'vue';
-import { callMethod } from 'vue-meteor-tracker';
 
 const error = ref();
 const username = ref('');
@@ -12,7 +11,7 @@ const create = async () => {
   error.value = null;
 
   try {
-    const response = await callMethod('createUser', username.value);
+    const response = await Meteor.callAsync('createUser', username.value);
     userId.value = response.userId;
     token.value = response.token;
     if (response.token) {
