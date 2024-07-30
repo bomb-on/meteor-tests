@@ -12,7 +12,7 @@ Accounts.createUserAsync = async options => {
   return await Accounts._createUserCheckingDuplicates({ user, options });
 };
 
-// Meteor.users.createIndexAsync('username', { unique: true, sparse: true });
+Meteor.users.createIndexAsync('username', { unique: true, sparse: true });
 
 Meteor.methods({
   createUser: async username => {

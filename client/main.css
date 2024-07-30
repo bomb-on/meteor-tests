@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button {
+  @apply disabled:text-gray-300 disabled:hover:bg-transparent;
+}

@@ -5,5 +5,26 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="app"></div>
+
+  <div id="loading" class="p-8">
+      <h1 class="text-2xl">Please wait, loading collection...</h1>
+      <div><span id="docs"></span> documents loaded</div>
+  </div>
+
+  <div id="main" class="p-8 hidden">
+      <input id="input" class="border rounded-lg p-2" placeholder="Enter username" type="text" />
+      <button id="submit" class="border rounded-lg p-2 ml-5 hover:bg-gray-200" disabled>
+          Create user
+      </button>
+
+      <div id="userid-container" class="mt-5 hidden">
+          User <code id="user-id" class="bg-gray-200 px-1"></code> created. <span id="logging-in">Logging in...</span>
+      </div>
+
+      <div id="username-container" class="mt-5 hidden">
+          User <code id="user-name" class="bg-gray-200 px-1"></code> logged in.
+      </div>
+
+      <div id="error" class="mt-5 text-red-700 hidden"></div>
+  </div>
 </body>
